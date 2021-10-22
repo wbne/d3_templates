@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet"> 
+    <title>Example of d3.js graph templates</title>
+</head>
+<body>
+    <div class="header">
+        <h1>stuff i guess</h1>
+        <h1 id="current">current file: </h1>
+        <h1 onclick="loadFile('test.csv')"><input class="fileInput" type="file"></input>upload file here</h1>
+    </div>
+    <div id="toolbar">
+        <div class="wrapper">
+            <p class="graphName">Barplot</p>
+            <input class="dropdown" type="checkbox"></input>
+                <div class="menu">
+                    <li><br></li>
+                    <li><p class="title">What it is</p></li>
+                    <li class="leftAlign">blah blah blah</li>
+                    <li><p class="title">Axis</p></li>
+                    <li class="leftAlign columns wide_div">Custom file columns go here!</li>
+                    <li><br></li>
+                    <li><button class="plotButton" onclick="loadFile('bargraph')">Plot!</button></li>
+                </div>
+        </div>
+        <div class="wrapper">
+            <p class="graphName">Dotplot</p>
+            <input class="dropdown" type="checkbox"></input>
+                <div class="menu">
+                    <li><br></li>
+                    <li><p class="title">What it is</p></li>
+                    <li class="leftAlign">blah blah blah</li>
+                    <li><p class="title">Axis</p></li>
+                    <li class="leftAlign columns wide_div">Custom file columns go here!</li>
+                    <li class="leftAlign"></li>
+                    <li><br></li>
+                    <li><button class="plotButton" onclick="loadFile('dotplot')">Plot!</button></li>
+                </div>
+        </div>
+        <div class="wrapper">
+            <p class="graphName">Linegraph</p>
+            <input class="dropdown" type="checkbox"></input>
+                <div class="menu">
+                    <li><br></li>
+                    <li><p class="title">What it is</p></li>
+                    <li class="leftAlign">blah blah blah</li>
+                    <li><p class="title">Axis</p></li>
+                    <li class="leftAlign columns wide_div">Custom file columns go here!</li>
+                    <li class="leftAlign"></li>
+                    <li><br></li>
+                    <li><button class="plotButton" onclick="loadFile('linegraph')">Plot!</button></li>
+                </div>
+        </div>
+    </div>
+    
+    <div id="graphArea"></div>     
+</body>
+<script src="./initialization.js"></script>
+<script src="./bargraph.js"></script>
+<script src="./dotplot.js"></script>
+<script src="./linegraph.js"></script>
+</html>
